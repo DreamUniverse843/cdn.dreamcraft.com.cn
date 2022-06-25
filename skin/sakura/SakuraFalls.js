@@ -162,7 +162,7 @@ function startSakura() {
    startSakura();
  }
 
- export function stopp() {
+ function stopp() {
    if (staticx) {
      let child = document.getElementById("canvas_sakura");
      child.parentNode.removeChild(child);
