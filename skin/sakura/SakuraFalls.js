@@ -109,7 +109,7 @@
    return ret;
  }
 
- export function startSakura() {
+function startSakura() {
 
    let requestAnimationFrame = window.requestAnimationFrame
      || window.mozRequestAnimationFrame
