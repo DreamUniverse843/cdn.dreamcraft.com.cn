@@ -5,10 +5,10 @@
         <local:MyHint Margin="0,10,0,10" IsWarn="True" Text="特别提示：遇到问题请先查阅 Wiki 和群内公告，并进行必要的搜索，找不到问题的解答再去提问！&#xA;游戏版本为 1.19.2，客户端系统环境必须有可靠的 Java 17 运行环境，否则无法运行客户端！&#xA;如发现客户端存在问题，请及时联系管理反馈，然后等待客户端版本更新。" />
         <TextBlock TextWrapping="Wrap" Margin="0,6,0,0" Text="请在下方点击“申请白名单”以进入工单系统。&#xA;" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-        <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight" Text="下载 Java 17" EventType="打开网页" EventData="https://www.oracle.com/java/technologies/downloads/#jdk17-windows" />
-        <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight" Text="查阅 Wiki" EventType="打开网页" EventData="http://wiki.xiaobaomc.cn:8093/index.php?title=%E5%8C%85%E5%AD%90%E9%93%BA%E6%9C%8D%E5%8A%A1%E5%99%A8" />
-            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight" Text="申请白名单" EventType="打开网页" EventData="http://xiao-yuan.tpddns.cn:8094/" />
-            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Text="检查更新" EventType="刷新主页" ToolTip="如果客户端长时间未启动过，请点击以向服务器请求检查更新" />
+        <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight" Text="下载 Java 17" EventType="打开网页" EventData="https://www.oracle.com/java/technologies/downloads/#jdk17-windows" ToolTip="客户端需要 Java 17 才能正常启动。" />
+        <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight" Text="查阅 Wiki" EventType="打开网页" EventData="http://wiki.xiaobaomc.cn:8093/index.php?title=%E5%8C%85%E5%AD%90%E9%93%BA%E6%9C%8D%E5%8A%A1%E5%99%A8" ToolTip="遇事不决，Wiki 力学(雾)" />
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight" Text="申请白名单" EventType="打开网页" EventData="http://xiao-yuan.tpddns.cn:8094/" ToolTip="没有白名单？去申请一个！" />
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Text="检查更新" EventType="刷新主页" ToolTip="如果客户端长时间未启动过或者希望检查是否最新，请点击以向服务器请求检查更新。" />
         </StackPanel>
     </StackPanel>
 </local:MyCard>
