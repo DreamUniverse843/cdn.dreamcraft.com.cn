@@ -1,4 +1,4 @@
-<local:MyCard Title="发行信息" Margin="0,0,0,15">
+<local:MyCard Title="客户端公告" Margin="0,0,0,15">
     <StackPanel Margin="25,40,23,15">
         <TextBlock TextWrapping="Wrap" Margin="0,6,0,0" Text="包子铺服务器 Fabric 创造服客户端。&#xA;游戏版本：1.19.2 , Fabric 0.14.9&#xA;客户端由管理组提供维护，进入服务器需要申请白名单，且必须使用正版登录。&#xA;包子铺服务器群聊：604890935" />
         <local:MyHint Margin="0,10,0,10" IsWarn="False" Text="客户端版本：1.0.0 (Release 2022-10-01)，您使用的已经是最新版本。" />
