@@ -1,0 +1,75 @@
+{
+  "name": "Bao-Cilent",
+  "author": "包子铺管理组",
+  "version": "1.0.2",
+  "description": "",
+  "fileApi": "https://dreamcraftoss.netlify.app/api/cilent/download",
+  "files": [
+    {
+      "path": "config/fml.toml",
+      "hash": "1cf6c38ff6790b3eba43bfad93af73ba0d082eb7"
+    },
+    {
+      "path": "config/forge-client.toml",
+      "hash": "fd55bc2efff3839efb1ba4f292e010e6e5837a01"
+    },
+    {
+      "path": "config/forge-common.toml",
+      "hash": "5bc53bed0d57ac0ea789bc1c879d13655632a6b3"
+    },
+    {
+      "path": "config/mtr.json",
+      "hash": "d996584915b9848da91ec632d347ff3274625cf4"
+    },
+    {
+      "path": "config/mtr_webserver_port.txt",
+      "hash": "535e55f2f0f72c2867cd7b3156d90eb3e9ecbf72"
+    },
+    {
+      "path": "config/NoChatReports.json",
+      "hash": "0f724b919c5e809ea55a6329426b1e6cbb8f0cfb"
+    },
+    {
+      "path": "mods/architectury-6.2.46-forge.jar",
+      "hash": "75513ce7346ce0c9b4d67bbf14d404e863a29a47"
+    },
+    {
+      "path": "mods/Joban-Client-Mod-forge-1.19.2-1.1.5-hotfix-1.jar",
+      "hash": "bbab6e02a009cc100b72e6dfe2d0021b41b169f2"
+    },
+    {
+      "path": "mods/MTR-forge-1.19.2-3.1.2.jar",
+      "hash": "f4b38ad561ac3665dcbd064d5232c9f42ce3d2df"
+    },
+    {
+      "path": "options.txt",
+      "hash": "3b4b456a50988468c6e2194c96e3d4c1c51cbf00"
+    },
+    {
+      "path": "optionsof.txt",
+      "hash": "15a2bd59c82f199081104a621e8f14ba2b8f8c4a"
+    },
+    {
+      "path": "servers.dat",
+      "hash": "75fb9784183fb669eb5fe4ec3884072922b960fb"
+    },
+    {
+      "path": "servers.dat_old",
+      "hash": "75fb9784183fb669eb5fe4ec3884072922b960fb"
+    }
+  ],
+  "addons": [
+    {
+      "id": "game",
+      "version": "1.19.2"
+    },
+    {
+      "id": "forge",
+      "version": "43.1.32"
+    },
+    {
+      "id": "optifine",
+      "version": "HD_U_H9"
+    }
+  ]
+}
