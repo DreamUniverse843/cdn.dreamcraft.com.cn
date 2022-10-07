@@ -82,7 +82,7 @@ killaura:
 
       # 假人（NPC）存在时间设置（刻（Ticks））
       check_ticks:
-        base: 100
+        base: 120
         attack_add: 20
         hit_bot_add: 50
 
@@ -99,12 +99,12 @@ killaura:
       enable: true
 
       # 玩家被这个模块标记后应该得到多少违规等级（VL）？
-      vl_weight: 5
+      vl_weight: 8
 
     # 扫射检查
     strafe:
       enable: true
-      vl_weight: 3
+      vl_weight: 5
       cancel_move: true
 
     # 结合检查
@@ -115,7 +115,7 @@ killaura:
           - 'ka.abt.magic'
           - 'hb.reach'
           - 'hb.reach'
-        action: 5 # +5违规等级（VL）
+        action: 10 # +5违规等级（VL）
 
   # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
@@ -126,8 +126,11 @@ killaura:
   # 阈值: '<命令>'
   commands:
     10: 'matrix npc %player% 100'
-    20: 'matrix notify %player% 可能正在使用战斗作弊 (杀戮光环(KillAura))'
-    35: 'matrix notify %player% 正在使用战斗作弊 (杀戮光环(KillAura)) #2'
+    12: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    15: 'title %player% title §c作弊检测'
+    20: 'matrix notify %player% 可能正在使用战斗作弊 (杀戮光环(KillAura)) #1'
+    30: 'matrix notify %player% 正在使用战斗作弊 (杀戮光环(KillAura)) #2'
+    40: 'matrix notify %player% 正在使用战斗作弊 (杀戮光环(KillAura)) #3'
     # 补充：也有可能是刀刀暴击（Critical(s)），但鄙人翻译时遵循原内容，所以未添加
     45: 'kick %player% Matrix 杀戮光环(反作弊自动判定)'
 
@@ -155,7 +158,7 @@ hitbox:
 
   # 违规权重
   vl_weights:
-    miss_player_hitbox: 2
+    miss_player_hitbox: 4
     reach_target_standing: 10
     reach_target_moving: 3
 
@@ -167,7 +170,7 @@ hitbox:
   # Note: dynamic VL = (current_reach - max_reach) * expander
   dynamic_vl:
     enable: true
-    expander: 10
+    expander: 5
     min_vl: 3
     max_vl: 8
 
@@ -184,10 +187,12 @@ hitbox:
   # 违规阈值
   # 阈值: '<命令>'
   commands:
-    10: 'matrix notify %player% 试图到达最大到达距离之外的实体 (自动攻击实体(HitBox))'
+    10: 'matrix notify %player% 试图到达最大到达距离之外的实体 (自动攻击实体(HitBox)) #1'
     12: 'matrix npc %player% 120'
+    13: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    14: 'title %player% title §c作弊检测'
     15: 'matrix notify %player% 试图到达最大到达距离之外的实体 (自动攻击实体(HitBox)) #2'
-    24: 'kick %player% Matrix 长臂猿/自动攻击实体作弊(反作弊自动判定)'
+    25: 'kick %player% Matrix 长臂猿/自动攻击实体作弊(反作弊自动判定)'
 
 ## 点击检查（Click check）
 # 防止玩家点击过快，或使用自动点击器攻击其他实体
@@ -219,6 +224,8 @@ click:
   # 阈值: '<命令>'
   commands:
     10: 'matrix notify %player% 试图异常的点击 (点击异常(Click)) #1'
+    12: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    15: 'title %player% title §c作弊检测'
     18: 'matrix notify %player% 试图异常的点击 (点击异常(Click)) #2'
     30: 'kick %player% Matrix 点击异常(反作弊自动判定)'
 
@@ -238,7 +245,7 @@ move:
   apply_damage: true
 
   # Matrix是否应该更严格地处理击退？
-  strict_kb_handling: false
+  strict_kb_handling: true
 
   # Matrix应该允许玩家站在被取消的方块上吗？
   # 建议不要开启，它会稍微影响性能并造成一些绕过。
@@ -271,8 +278,10 @@ move:
   # 阈值: '<命令>'
   commands:
     55: 'matrix notify %player% 试图异常的移动 (移动异常(Move)) #1'
+    70: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    75: 'title %player% title §c作弊检测'
     90: 'matrix notify %player% 试图异常的移动 (移动异常(Move)) #2'
-    220: 'kick %player% Matrix 移动异常(反作弊自动判定)'
+    200: 'kick %player% Matrix 移动异常(反作弊自动判定)'
 
 ## 坏数据包（BadPackets）
 # 防止玩家发送过多的移动数据包或发送非法数据包
@@ -303,6 +312,8 @@ badpackets:
   # 阈值: '<命令>'
   commands:
     100: 'matrix notify %player% 正在向服务器发送异常数据包 (坏数据包(BadPackets)) #1'
+    120: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    130: 'title %player% title §c作弊检测'
     150: 'matrix notify %player% 正在向服务器发送异常数据包 (坏数据包(BadPackets)) #2'
     240: 'kick %player% Matrix 发送异常数据包(反作弊自动判定)'
 
@@ -318,12 +329,12 @@ delay:
   # 模块列表
   # 您可以定义每个模块的违规等级（VL）权重，-1等于禁用它
   check_healing: 1
-  check_using_items: 1
+  check_using_items: 2
   check_using_bow: 1
   check_auto_splash: 2
   check_inventory_action: 1
   check_auto_totem: 1
-  check_fast_throw: 1
+  check_fast_throw: 2
 
   # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
@@ -334,6 +345,8 @@ delay:
   # 阈值: '<命令>'
   commands:
     3: 'matrix notify %player% 正在试图加速动作 (延迟检查(Delay)) #1'
+    4: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    4: 'title %player% title §c作弊检测'
     5: 'matrix notify %player% 正在试图加速动作 (延迟检查(Delay)) #2'
     10: 'kick %player% Matrix 动作加速(反作弊自动判定)'
 
@@ -375,8 +388,11 @@ block:
   # 违规阈值
   # 阈值: '<命令>'
   commands:
-    10: 'matrix notify %player% 试图太快地放置/破坏一个方块 (快速放置/快速破坏(FastPlace/FastBreak))'
-    20: 'kick %player% Matrix 快速放置/快速破坏作弊(反作弊自动判定)'
+    10: 'matrix notify %player% 试图太快地放置/破坏一个方块 (快速放置/快速破坏(FastPlace/FastBreak)) #1'
+    12: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    15: 'title %player% title §c作弊检测'
+    20: 'matrix notify %player% 试图太快地放置/破坏一个方块 (快速放置/快速破坏(FastPlace/FastBreak)) #2'
+    25: 'kick %player% Matrix 快速放置/快速破坏作弊(反作弊自动判定)'
 
 ## 自动搭路检查（Scaffold check）
 # 检查并防止玩家桥接方块或以比正常速度更快的速度向上搭（Tower）
@@ -420,7 +436,9 @@ scaffold:
   # 违规阈值
   # 阈值: '<命令>'
   commands:
-    10: 'matrix notify %player% 试图快速桥接方块 (自动搭路(Scaffold))'
+    10: 'matrix notify %player% 试图快速桥接方块 (自动搭路(Scaffold)) #1'
+    12: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    14: 'title %player% title §c作弊检测'
     15: 'matrix notify %player% 试图快速桥接方块 (自动搭路(Scaffold)) #2'
     24: 'kick %player% Matrix 自动搭路/自动向上搭(反作弊自动判定)'
 
@@ -445,7 +463,9 @@ jesus:
   # 违规阈值
   # 阈值: '<命令>'
   commands:
-    20: 'matrix notify %player% 试图在液体中非法移动 (液体中非法移动(Jesus))'
+    20: 'matrix notify %player% 试图在液体中非法移动 (液体中非法移动(Jesus)) #1'
+    25: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    30: 'title %player% title §c作弊检测'
     40: 'matrix notify %player% 试图在液体中非法移动 (液体中非法移动(Jesus)) #2'
     50: 'kick %player% Matrix 液体中非法移动/水上加速/水上飞行作弊(反作弊自动判定)'
 
@@ -476,7 +496,9 @@ velocity:
   # 违规阈值
   # 阈值: '<命令>'
   commands:
-    10: 'matrix notify %player% 试图无视服务器击退 (反击退(Velocity))'
+    10: 'matrix notify %player% 试图无视服务器击退 (反击退(Velocity)) #1'
+    12: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    14: 'title %player% title §c作弊检测'
     15: 'matrix notify %player% 试图无视服务器击退 (反击退(Velocity)) #2'
     20: 'kick %player% Matrix 反击退/抗击退(反作弊自动判定)'
 
@@ -501,6 +523,8 @@ chat:
   # 阈值: '<命令>'
   commands:
     4: 'matrix notify %player% 正在刷屏 (刷屏器(ChatSpam))'
+    6: 'title %player% subtitle 这是系统警告，您正在执行刷屏操作，请立刻停止您的操作。'
+    8: 'title %player% title §c刷屏检测'
     10: 'kick %player% Matrix 刷屏(ChatSpam,反作弊自动判定)'
 
 ## 非法交互（Interact）
@@ -520,8 +544,11 @@ interact:
   # 违规阈值
   # 阈值: '<命令>'
   commands:
-    10: 'matrix notify %player% 试图与实体/方块非法交互 (非法交互(Interact))'
-    15: 'kick %player% Matrix 与方块/实体非法互动(反作弊自动判定)'
+    10: 'matrix notify %player% 试图与实体/方块非法交互 (非法交互(Interact)) #1'
+    12: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    15: 'title %player% title §c作弊检测'
+    18: 'matrix notify %player% 试图与实体/方块非法交互 (非法交互(Interact)) #2'
+    20: 'kick %player% Matrix 与方块/实体非法互动(反作弊自动判定)'
 
 ## 穿墙（Phase）
 # 检查并防止玩家穿过方块。
@@ -550,6 +577,8 @@ phase:
   # 阈值: '<命令>'
   commands:
     7: 'matrix notify %player% 正在穿过方块 (穿墙(Phase))'
+    10: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    12: 'title %player% title §c作弊检测'
     13: 'matrix notify %player% 正在穿过方块 (穿墙(Phase)) #2'
     20: 'kick %player% Matrix 非法穿墙作弊(反作弊自动判定)'
 
@@ -568,7 +597,9 @@ autobot:
   # 违规阈值
   # 阈值: '<命令>'
   commands:
-    5: 'matrix notify %player% 可能是机器人 (机器人(AutoBot))'
+    5: 'matrix notify %player% 可能是机器人 (机器人(AutoBot)) #1'
+    7: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    8: 'title %player% title §c作弊检测'
     10: 'matrix notify %player% 可能是机器人 (机器人(AutoBot)) #2'
     15: 'kick %player% Matrix 可能在使用机器人(反作弊自动判定)'
 
@@ -598,7 +629,9 @@ elytra:
   # 违规阈值
   # 阈值: '<命令>'
   commands:
-    10: 'matrix notify %player% 怀疑使用非法的鞘翅飞行 (鞘翅(Elytra))'
+    10: 'matrix notify %player% 怀疑使用非法的鞘翅飞行 (鞘翅(Elytra)) #1'
+    12: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    15: 'title %player% title §c作弊检测'
     20: 'matrix notify %player% 怀疑使用非法的鞘翅飞行 (鞘翅(Elytra)) #2'
     40: 'kick %player% Matrix 非法鞘翅飞行(反作弊自动判定)'
 
@@ -641,6 +674,8 @@ vehicle:
   # 违规阈值
   # 阈值: '<命令>'
   commands:
-    5: 'matrix notify %player% 可能在使用载具作弊 (载具(Vehicle))'
-    10: 'matrix notify %player% 可能在使用载具作弊 (载具(Vehicle)) #2'
+    5: 'matrix notify %player% 可能在使用载具作弊 (载具(Vehicle)) #1'
+    8: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    10: 'title %player% title §c作弊检测'
+    12: 'matrix notify %player% 可能在使用载具作弊 (载具(Vehicle)) #2'
     17: 'kick %player% Matrix 非法载具移动(反作弊自动判定)'
