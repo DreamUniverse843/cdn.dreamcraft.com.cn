@@ -3,7 +3,7 @@
   "author": "包子铺管理组",
   "version": "1.0.2",
   "description": "",
-  "fileApi": "https://dreamcraftoss.netlify.app/api/cilent/download",
+  "fileApi": "https://dreamcraftcdn.netlify.app/api/cilent/download",
   "files": [
     {
       "path": "config/fml.toml",
