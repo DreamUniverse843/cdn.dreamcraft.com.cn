@@ -129,7 +129,7 @@ killaura:
   # 阈值: '<命令>'
   commands:
     10: 'matrix npc %player% 100'
-    11: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    11: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     12: 'title %player% title "\u00A7c作弊检测"'
     13: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     20: 'matrix notify %player% 可能正在使用战斗作弊 (杀戮光环(KillAura)) #1'
@@ -193,7 +193,7 @@ hitbox:
   commands:
     10: 'matrix notify %player% 试图到达最大到达距离之外的实体 (自动攻击实体(HitBox)) #1'
     11: 'matrix npc %player% 120'
-    12: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    12: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     13: 'title %player% title "\u00A7c作弊检测"'
     14: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     15: 'matrix notify %player% 试图到达最大到达距离之外的实体 (自动攻击实体(HitBox)) #2'
@@ -229,7 +229,7 @@ click:
   # 阈值: '<命令>'
   commands:
     9: 'matrix notify %player% 试图异常的点击 (点击异常(Click)) #1'
-    10: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    10: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     11: 'title %player% title "\u00A7c作弊检测"'
     12: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     18: 'matrix notify %player% 试图异常的点击 (点击异常(Click)) #2'
@@ -284,7 +284,7 @@ move:
   # 阈值: '<命令>'
   commands:
     55: 'matrix notify %player% 试图异常的移动 (移动异常(Move)) #1'
-    68: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    68: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     69: 'title %player% title "\u00A7c作弊检测"'
     70: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     90: 'matrix notify %player% 试图异常的移动 (移动异常(Move)) #2'
@@ -319,7 +319,7 @@ badpackets:
   # 阈值: '<命令>'
   commands:
     100: 'matrix notify %player% 正在向服务器发送异常数据包 (坏数据包(BadPackets)) #1'
-    118: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    118: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     119: 'title %player% title "\u00A7c作弊检测"'
     120: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     150: 'matrix notify %player% 正在向服务器发送异常数据包 (坏数据包(BadPackets)) #2'
@@ -353,7 +353,7 @@ delay:
   # 阈值: '<命令>'
   commands:
     2: 'matrix notify %player% 正在试图加速动作 (延迟检查(Delay)) #1'
-    3: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    3: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     4: 'title %player% title "\u00A7c作弊检测"'
     5: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     6: 'matrix notify %player% 正在试图加速动作 (延迟检查(Delay)) #2'
@@ -398,7 +398,7 @@ block:
   # 阈值: '<命令>'
   commands:
     10: 'matrix notify %player% 试图太快地放置/破坏一个方块 (快速放置/快速破坏(FastPlace/FastBreak)) #1'
-    11: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    11: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     12: 'title %player% title "\u00A7c作弊检测"'
     13: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     20: 'matrix notify %player% 试图太快地放置/破坏一个方块 (快速放置/快速破坏(FastPlace/FastBreak)) #2'
@@ -447,7 +447,7 @@ scaffold:
   # 阈值: '<命令>'
   commands:
     10: 'matrix notify %player% 试图快速桥接方块 (自动搭路(Scaffold)) #1'
-    11: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    11: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     12: 'title %player% title "\u00A7c作弊检测"'
     13: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     15: 'matrix notify %player% 试图快速桥接方块 (自动搭路(Scaffold)) #2'
@@ -475,7 +475,7 @@ jesus:
   # 阈值: '<命令>'
   commands:
     20: 'matrix notify %player% 试图在液体中非法移动 (液体中非法移动(Jesus)) #1'
-    23: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    23: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     24: 'title %player% title "\u00A7c作弊检测"'
     25: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     40: 'matrix notify %player% 试图在液体中非法移动 (液体中非法移动(Jesus)) #2'
@@ -509,7 +509,7 @@ velocity:
   # 阈值: '<命令>'
   commands:
     10: 'matrix notify %player% 试图无视服务器击退 (反击退(Velocity)) #1'
-    11: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    11: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     12: 'title %player% title "\u00A7c作弊检测"'
     13: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     15: 'matrix notify %player% 试图无视服务器击退 (反击退(Velocity)) #2'
@@ -558,7 +558,7 @@ interact:
   # 阈值: '<命令>'
   commands:
     10: 'matrix notify %player% 试图与实体/方块非法交互 (非法交互(Interact)) #1'
-    11: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    11: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     12: 'title %player% title "\u00A7c作弊检测"'
     13: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     18: 'matrix notify %player% 试图与实体/方块非法交互 (非法交互(Interact)) #2'
@@ -591,7 +591,7 @@ phase:
   # 阈值: '<命令>'
   commands:
     7: 'matrix notify %player% 正在穿过方块 (穿墙(Phase))'
-    8: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    8: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     9: 'title %player% title "\u00A7c作弊检测"'
     10: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     13: 'matrix notify %player% 正在穿过方块 (穿墙(Phase)) #2'
@@ -613,7 +613,7 @@ autobot:
   # 阈值: '<命令>'
   commands:
     5: 'matrix notify %player% 可能是机器人 (机器人(AutoBot)) #1'
-    6: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    6: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     7: 'title %player% title "\u00A7c作弊检测"'
     8: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     10: 'matrix notify %player% 可能是机器人 (机器人(AutoBot)) #2'
@@ -646,7 +646,7 @@ elytra:
   # 阈值: '<命令>'
   commands:
     10: 'matrix notify %player% 怀疑使用非法的鞘翅飞行 (鞘翅(Elytra)) #1'
-    11: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    11: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     12: 'title %player% title "\u00A7c作弊检测"'
     13: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     20: 'matrix notify %player% 怀疑使用非法的鞘翅飞行 (鞘翅(Elytra)) #2'
@@ -692,7 +692,7 @@ vehicle:
   # 阈值: '<命令>'
   commands:
     5: 'matrix notify %player% 可能在使用载具作弊 (载具(Vehicle)) #1'
-    8: 'title %player% subtitle 这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。'
+    8: 'title %player% subtitle "这是系统警告，您正在执行疑似作弊操作，请立刻停止您的操作。"'
     9: 'title %player% title "\u00A7c作弊检测"'
     10: 'title %player% actionbar "\u00A7c请立刻潜行并进行格挡避免被踢出游戏！"'
     12: 'matrix notify %player% 可能在使用载具作弊 (载具(Vehicle)) #2'
